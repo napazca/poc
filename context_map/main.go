@@ -36,7 +36,6 @@ func NextDeepFlow(ctx context.Context) {
 	})
 }
 
-
 func NexFlow2(ctx context.Context) {
 	ctx = AppendCtxLog(ctx, map[string]interface{}{
 		"c1": 1,
@@ -50,7 +49,6 @@ func NextDeepFlow2(ctx context.Context) {
 		"c2": 2,
 	})
 }
-
 
 func AppendCtxLog(ctx context.Context, fields map[string]interface{}) context.Context {
 

@@ -1,3 +1,10 @@
 module github.com/napazca/poc
 
 go 1.12
+
+require (
+	github.com/afex/hystrix-go v0.0.0-20180502004556-fa1af6a1f4f5
+	github.com/cenk/backoff v2.2.1+incompatible // indirect
+	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
+	github.com/rubyist/circuitbreaker v2.2.1+incompatible
+)
