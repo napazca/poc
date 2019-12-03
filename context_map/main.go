@@ -20,6 +20,8 @@ func main() {
 
 	NexFlow2(ctx)
 	fmt.Println("Back to Main Flow 2->", ctx.Value("logs"))
+
+	fmt.Println("GrandChildren", ctx.Value("grand-child"))
 }
 
 func NextFlow(ctx context.Context) {
@@ -40,6 +42,8 @@ func NexFlow2(ctx context.Context) {
 	ctx = AppendCtxLog(ctx, map[string]interface{}{
 		"c1": 1,
 	})
+
+	ctx = context.WithValue(ctx, "grand-child", "flow2")
 
 	NextDeepFlow2(ctx)
 }
